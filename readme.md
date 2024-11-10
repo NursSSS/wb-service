@@ -13,12 +13,16 @@
 `date: 'YYYY-MM-DD'` - найти тарифы по дате (Опциональный)
 2. http://localhost:3000/api/upload_to_sheet - Загрузить тарифы в таблицу(-ы)
 Body:
-`{
-    data: [tarrifs...] // Required
-    sheet_credentials: [{
-        id: string // Id of google sheet
-        name: string // List of sheet
-    }...] // Optional, если не указывается, берется таблица из .env файла
+```
+JSON
+{
+    "data": [tarrifs...] // Required
+    "sheet_credentials": [
+        {
+            "id": "string" // Id of google sheet
+            "name": "string" // List of sheet
+        }
+    ...] // Optional, если не указывается, берется таблица из .env файла
 }`
 
 **Tasks**:
